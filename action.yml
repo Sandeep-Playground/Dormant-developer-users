@@ -35,5 +35,5 @@ runs:
         export GITHUB_TOKEN="${{ inputs.github_token }}"
         export ORG_NAMES="${{ inputs.org_names }}"
         export DAYS_INACTIVE_THRESHOLD="${{ inputs.days_inactive_threshold }}"
-        python dormant_users.py
+        python dormant_developer_users.py
       shell: bash
