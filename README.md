@@ -43,18 +43,21 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          repository: org-name/repo-name
+      
 
       - name: Run Dormant Developer Users Report
-        uses: your-org/dormant-developer-users-action@v1
+        uses: org-name/repo-name@v1.0.0
         with:
           github_token: ${{ secrets.ORG_AUDIT_TOKEN }}
-          org_names: my-org,subsidiary-org
+          org_names: org
           days_inactive_threshold: 90
 
       - name: Upload dormant users report
         uses: actions/upload-artifact@v4
         with:
-          name: name: dormant-developer-users-report
+          name: dormant-developer-users-report
           path: "*.csv"
 
 ```
