@@ -12,7 +12,7 @@ branding:
 > You must create a GitHub secret (for example, `ORG_AUDIT_TOKEN`) and pass it explicitly to the action.
 
 inputs:
-  github_token:
+  github_token: # You must create a GitHub secret (for example, `${{ secrets.ORG_AUDIT_TOKEN }}`) and pass it explicitly to the action.
     description: GitHub token with read:org and repo permissions
     required: true
   org_names:
