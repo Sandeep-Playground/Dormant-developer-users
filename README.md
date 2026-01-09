@@ -27,6 +27,26 @@ Run dormant developer user audits automatically using **GitHub Actions**, withou
   - `never-active` if no activity is detected
 - Generates a CSV report summarizing user activity status.
 
+
+## Usage
+
+```yml
+steps:
+  - name: Run Dormant Developer Users Report
+    uses: org-name/repo-name@v1.0.0
+    with:
+      github_token: ${{ secrets.ORG_AUDIT_TOKEN }}
+      org_names: org
+      days_inactive_threshold: 90
+
+  - name: Upload dormant users report
+    uses: actions/upload-artifact@v4
+    with:
+      name: dormant-developer-users-report
+      path: "*.csv"
+```
+
+
 ### Example workflow
 
 ```yaml
