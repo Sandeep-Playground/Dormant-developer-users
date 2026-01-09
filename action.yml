@@ -27,7 +27,7 @@ runs:
         python-version: "3.11"
 
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: pip install -r "${{ github.action_path }}/requirements.txt"
       shell: bash
 
     - name: Run dormant users report
@@ -35,5 +35,5 @@ runs:
         export GITHUB_TOKEN="${{ inputs.github_token }}"
         export ORG_NAMES="${{ inputs.org_names }}"
         export DAYS_INACTIVE_THRESHOLD="${{ inputs.days_inactive_threshold }}"
-        python dormant_developer_users.py
+        python "${{ github.action_path }}/dormant_developer_users.py"
       shell: bash
