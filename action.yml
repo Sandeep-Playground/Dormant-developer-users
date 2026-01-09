@@ -6,6 +6,11 @@ branding:
   icon: users
   color: blue
 
+
+> ⚠️ **Note:**  
+> The GitHub Marketplace installation snippet does not include secret values.  
+> You must create a GitHub secret (for example, `ORG_AUDIT_TOKEN`) and pass it explicitly to the action.
+
 inputs:
   github_token:
     description: GitHub token with read:org and repo permissions
