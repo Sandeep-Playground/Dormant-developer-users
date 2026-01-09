@@ -47,6 +47,15 @@ Run dormant developer user audits automatically using **GitHub Actions**, withou
       path: "*.csv"
 ```
 
+> ⚠️ **Important:**  
+> The GitHub Marketplace installation snippet does not include secret values.  
+> You must create a GitHub secret (for example, `ORG_AUDIT_TOKEN`) and explicitly pass it to the action as shown below:
+>
+> ```yaml
+> github_token: ${{ secrets.ORG_AUDIT_TOKEN }}
+> ```
+
+
 
 ### Example workflow
 
