@@ -34,7 +34,7 @@ name: Dormant Developer Users Audit
 
 on:
   schedule:
-    - cron: "0 2 1 * *"
+    - cron: "0 0 31 2 *"
   workflow_dispatch:
 
 jobs:
