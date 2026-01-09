@@ -17,6 +17,7 @@ inputs:
   days_inactive_threshold: 
     description: |
     Days to consider a user inactive
+    Optional input. Default is 60 days.
     required: false
     default: "60"
 
